@@ -168,9 +168,32 @@ namespace solution
             */
 
             //2.4
+            /*
+            for (int i = 0; i < 5; i++) 
+            {
+                Console.WriteLine();
+                for (int j = i; j < 5; j++)
+                {
+                    Console.Write("$");
+                }
+            }
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine();
+                for (int j = 0; j <= i; j++)
+                {
+                    Console.Write("*");
+                }
+            }
 
-
-
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 1; j <= 5 - i; j++)
+                    Console.Write(" ");
+                for (int j = 1; j <= 2 * i - 1; j++)
+                    Console.Write("*");
+                Console.Write("\n");
+            }*/
 
             //2.5
             /*
@@ -207,6 +230,56 @@ namespace solution
                 Console.WriteLine("a, b, c không tạo thành độ dài 3 cạnh của một tam giác.");
             }
              */
+
+            //2.6
+            /*
+            int n = 10;
+            int x = 0;
+            for (int i = 1; i <= n; i++)
+            {
+                for (int j = 1; j <= n - i; j++)
+                {
+                    Console.Write(" ");
+                }
+
+                for (int j = 1; j <= i; j++)
+                {
+                    x++;
+                    Console.Write(x % 10);
+                }
+
+                for (int j = i - 1; j >= 1; j--)
+                {
+                    x--;
+                    Console.Write(x % 10);
+                }
+                Console.WriteLine();
+            }*/
+
+            //2.7
+            /*
+            Console.WriteLine("Nhap so tien gui: ");
+            double tienGoc = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Nhap lai suat ngan hang (tinh theo nam): ");
+            double laiSuatNam = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Nhap so thang gui: ");
+            int soThangGui = Convert.ToInt32(Console.ReadLine());
+
+            double laiSuatThang = (laiSuatNam / 12) / 100;
+            double tienLaiThang = tienGoc * laiSuatThang;
+
+            for (int i = 0; i < soThangGui; i++)
+            {
+                tienGoc += tienLaiThang;
+            }
+
+            double tienLaiCuoiKy = tienGoc - (tienGoc / (1 + laiSuatThang) * Math.Pow(1 + laiSuatThang, soThangGui));
+
+            Console.WriteLine("So du cuoi ky: " + tienGoc);
+            Console.WriteLine("Tien lai cuoi ky: " + tienLaiCuoiKy);
+            */
 
             Console.ReadLine();
         }
